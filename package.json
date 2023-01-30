@@ -1,0 +1,14 @@
+{
+  "name": "habitmate",
+  "version": "1.0.0",
+  "description": "Habit Tracker is an application that helps users establish and maintain healthy habits. It provides an interface to track and monitor the progress of daily routines and set reminders to keep users on track. The app is designed to motivate and encourage users to stick to their goals, promoting a healthier lifestyle.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vikram",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
