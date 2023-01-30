@@ -5,9 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+
 </head>
 <body>
+    <nav class="flex items-center justify-between px-4 py-3 bg-gray-900 text-white">
+        <div class="text-xl font-medium">HabitMate</div>
+        <div class="flex items-center">
+            <button class="bg-blue-500 px-3 py-2 rounded-full text-white mr-4 hover:bg-blue-400">User</button>
+            <button class="bg-red-500 px-3 py-2 rounded-full text-white hover:bg-red-400">Logout</button>
+        </div>
+        <button class="fixed bottom-24 right-24 bg-green-500 px-3 py-2 rounded-full text-white hover:bg-green-400">
+            <div class="text-5xl">✌️</div>
+        </button>
+    </nav>
 
+    <script src="css/layout.css"></script>
 </body>
 </html>
