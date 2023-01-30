@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue&display=swap');
+
+.text-helvetica-neue {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+#login {
+    background-image:
+        linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),
+        url('../images/background2.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+.title {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    /* color: rgb(252 165 165); */
+    /* color: rgb(254 242 242); */
+    /* color: rgb(254 215 170); */
+    color: rgb(154 52 18);
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 20px;
+    /* color: rgb(163 230 53); */
+    /* color: rgb(20 83 45); */
+    /* color: rgb(251 146 60); */
+    color: rgb(254 215 170);
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+.login-btn {
+    /* background-color: green; */
+    color: white;
+
+}
+
+.logout-btn {
+    /* background-color: red; */
+    color: white;
+}
+
+.title span {
+    display: inline-block;
+    animation: letter-by-letter 2s forwards infinite;
+}
+
+@keyframes letter-by-letter {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
