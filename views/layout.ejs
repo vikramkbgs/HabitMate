@@ -6,20 +6,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 </head>
+<style>
+    /* default styles */
+    .card {
+        width: 30%;
+        padding: 20px;
+        box-shadow: 0px 0px 10px 0px grey;
+        margin: 20px;
+    }
+
+    .card-header {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .card-body {
+        font-size: 18px;
+        padding-top: 20px;
+    }
+
+    /* responsive styles */
+    @media only screen and (max-width: 700px) {
+        #card-container {
+            width: 100%;
+            margin: 0;
+            float: none;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .card {
+            width: 90%;
+        }
+    }
+
+      /* Mobile styles */
+    @media only screen and (max-width: 767px) {
+        .card {
+            width: calc(100% - 40px);
+            margin: 20px;
+        }
+        .navbar {
+            flex-wrap: wrap;
+        }
+        .navbar button {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    /* Desktop styles */
+    @media only screen and (min-width: 768px) {
+        .card {
+            width: 300px;
+            margin: 20px;
+        }
+        .navbar button {
+            width: auto;
+            margin-right: 10px;
+        }
+    }
+
+     @media (max-width: 400px) {
+        .hidden {
+            display: none;
+        }
+    }
+
+    .hamburger-menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 55px;
+  padding: 10px;
+}
+
+.hamburger-menu.active {
+  display: block;
+}
+
+div#hamburger-menu {
+    width: 40px;
+}
+
+.dropdown-content{
+    width: 100px;
+    padding: 10px;
+}
+
+@media (max-width: 640px) {
+  #humberger-alt {
+    display: none !important;
+  }
+}
+
+@media (min-width: 640px) {
+  .hamburger-menu{
+    display: none;
+  }
+}
+
+</style>
+
 <body>
     <nav class="flex items-center justify-between px-4 py-3 bg-gray-900 text-white">
         <div class="text-xl font-medium">HabitMate</div>
-        <div class="flex items-center">
+        <div class="flex items-center md:flex" id="humberger-alt">
             <button class="bg-blue-500 px-3 py-2 rounded-full text-white mr-4 hover:bg-blue-400">User</button>
             <button class="bg-red-500 px-3 py-2 rounded-full text-white hover:bg-red-400">Logout</button>
         </div>
-        <button class="fixed bottom-24 right-24 bg-green-500 px-3 py-2 rounded-full text-white hover:bg-green-400">
-            <div class="text-5xl">✌️</div>
+        <div class="hamburger-menu sm:flex sm:items-center sm:justify-end" id="hamburger-menu">
+                <div class="dropdown-content absolute bg-gray-900 rounded text-white">
+                    <a href="#" class="block  hover:bg-gray-800">User</a>
+                    <a href="#" class="block  hover:bg-gray-800">Logout</a>
+                </div>
+        </div>
+        <button class="fixed bottom-24 right-24 bg-green-500 px-1 py-1 rounded-full text-white hover:bg-green-400">
+            <div class="text-4xl">+</div>
+        </button>
+        <button class="hamburger sm:hidden" id="hamburger-toggle">
+            <i class="fas fa-bars"></i>
         </button>
     </nav>
-
-    <script src="css/layout.css"></script>
+    <div class="flex flex-wrap w-screen" id="card-container">
+        <% habits.forEach((habit)=> { %>
+            <div class="card mt-4 mx-4 bg-indigo-100 rounded-lg">
+                <div class="card-header bg-indigo-500 text-white font-bold text-xl p-4">
+                    <%= habit.nameOfHabit %>
+                </div>
+                <div class="card-body p-4">
+                    <p>Start Date: <%= habit.startDate.toDateString() %>
+                    </p>
+                    <p>Days Completed: <%= habit.done.length %>
+                    </p>
+                    <p>Days Missed: <%= habit.notDone.length %>
+                    </p>
+                </div>
+            </div>
+            <% }); %>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+                $("#hamburger-toggle").click(function () {
+                    $("#hamburger-menu").toggleClass("active");
+                    console.log("toggle working");
+                });
+            });
+    </script>
 </body>
 </html>
