@@ -13,3 +13,20 @@ module.exports.userHabits = function (req, res) {
     return res.render("layout", { habits });
   });
 };
+
+module.exports.habitsCalender = function (req, res) {
+  var weeks = [];
+  var currentDate = new Date(2022, 11, 1);
+
+
+  while (currentDate.getMonth() === 11) {
+    var week = [];
+    for (var i = 0; i < 7; i++) {
+      week.push({ date: new Date(currentDate) });
+      currentDate.setDate(currentDate.getDate() + 1);
+    }
+    weeks.push(week);
+  }
+      console.log(weeks);
+      return res.render('calender');
+};
