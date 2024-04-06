@@ -1,0 +1,26 @@
+{
+  "name": "habitmate",
+  "description": "Habit Tracker is an application that helps users establish and maintain healthy habits. It provides an interface to track and monitor the progress of daily routines and set reminders to keep users on track. The app is designed to motivate and encourage users to stick to their goals, promoting a healthier lifestyle.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vikramkbgs/HabitMate.git"
+  },
+  "keywords": [
+    "Habit",
+    "tracker"
+  ],
+  "author": "Vikram Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikramkbgs/HabitMate/issues"
+  },
+  "homepage": "https://github.com/vikramkbgs/HabitMate#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
