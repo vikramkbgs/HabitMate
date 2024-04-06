@@ -8,9 +8,36 @@
     <link rel="stylesheet" href="/css/layout.css">
 </head>
 <body>
+    <nav>
+        <a href="/"><i class="fas fa-home"></i></a>
+    </nav>
+    <main>
+
+        <div class="heading">
+            <h1>Habit Tracker</h1>
+        </div>
+        <!-- Form For Taking Habit List -->
+        <div>
+            <form class="form-habit" action="/add-habit" method="post" >
+                <input type="text" name="habit-name" placeholder="Enter Habit You Wnt To Build" id="input-habit" required>
+                <button type="submit"><i class="fas fa-plus"></i></button>
+            </form>
+        </div>
+
+        <!-- Rendering habits -->
+        <div class="render-habits">
+            <ul class="list-item">
+                <% for (const it of habit_list){ %>
+                <li onclick="location.href='/view-habit/?id=<%=it._id%>'" class="list-item">
+                    <div class="habit"><i class="far fa-clipboard"></i> <%=it.habit_name%></div>
+                    <div class="delete"><a href="/delete-habit/?id=<%=it._id%>"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+                <% } %> 
+            </ul>
+        </div>
+
+
+    </main>
 </body>
-<script> 
-const habit_list = '<%- JSON.stringify(habit_list) %>';
-console.log(habit_list);
-</script>
 </html>
