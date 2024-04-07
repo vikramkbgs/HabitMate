@@ -3,12 +3,13 @@
 }
 
 .habit-form input {
-  font-size: 1.5rem;
-  padding: .3rem;
-  padding-left: .4rem;
-  width: 25rem;
-  border-radius: 25px;
+  font-size: 1.2rem;
+  padding: .2rem;
+  padding-left: 1rem;
+  width: 22rem;
+  border-radius: 10px;
   border: none;
+  margin-left: 10%;
 }
 
 .habit-form .button {
@@ -37,9 +38,9 @@
   list-style: none;
   font-size: 2rem;
   justify-content: left;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 5px;
-  border-bottom: 1px solid rgba(236, 232, 232, 0.363);
+  border-bottom: 3px solid rgba(249, 246, 246, 0.363);
   cursor: pointer;
   width: 100%;
   display: inline-flex;
@@ -58,4 +59,9 @@
 
 .list-item li .fas {
   position: inherit;
+}
+
+.list-item li .habit-steak {
+  font-size: 1rem;
+  margin-left: 8%;
 }
