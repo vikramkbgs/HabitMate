@@ -18,5 +18,3 @@ Habit Tracker is an application that helps users establish and maintain healthy 
    - View today's status and the status of the previous 6 days for each habit.
    - Toggle the status for today and past days using the provided buttons.
 
----
-Feel free to customize the README file further with additional information or sections as needed for your project.
