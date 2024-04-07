@@ -18,3 +18,24 @@ Habit Tracker is an application that helps users establish and maintain healthy 
    - View today's status and the status of the previous 6 days for each habit.
    - Toggle the status for today and past days using the provided buttons.
 
+## Installation
+1. Clone the repository to your local machine:
+    ```sh
+    git clone https://github.com/your-username/habit-tracker.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd habit-tracker
+    ```
+3. Open the project in your preferred code editor.
+4. Install dependencies:
+    ```sh
+    npm install
+    ```
+5. Run the application using npm:
+    ```sh
+    npm run dev
+    ```
+6. Access the application in your web browser at `http://localhost:3000`.
+
+If you're using a different setup or framework for development, adjust the commands accordingly.
