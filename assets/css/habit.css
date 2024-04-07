@@ -10,13 +10,6 @@
   color: rgba(255, 255, 255, 0.788);
 }
 
-.status {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #ad9292;
-}
-
 .date-container {
   display: flex;
   padding: 5px;
@@ -29,7 +22,7 @@
 
 .date-container div .date-picker {
   font-size: 1rem;
-  background-color: rgba(43, 40, 40, 0.473);
+  background-color: rgba(246, 242, 242, 0.473);
   color: white;
   border: none;
   border-radius: 10px;
@@ -53,4 +46,27 @@
 
 .key {
   display: inline-flex;
+}
+
+#item-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.7rem;
+  padding: 0px;
+}
+
+#item-list li {
+  list-style: none;
+  font-size: 1.5rem;
+  display: flex;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.status {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: gray;
+  position: initial;
 }
