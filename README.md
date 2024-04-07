@@ -21,11 +21,11 @@ Habit Tracker is an application that helps users establish and maintain healthy 
 ## Installation
 1. Clone the repository to your local machine:
     ```sh
-    git clone https://github.com/your-username/habit-tracker.git
+    git clone https://github.com/vikramkbgs/HabitMate.git
     ```
 2. Navigate to the project directory:
     ```sh
-    cd habit-tracker
+    cd habitMate
     ```
 3. Open the project in your preferred code editor.
 4. Install dependencies:
