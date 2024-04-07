@@ -13,7 +13,8 @@ const habitSchema = new mongoose.Schema({
     record_tracker: {
         type: Map
     }
-},{
+},
+{
     timestamp: true
 })
 
